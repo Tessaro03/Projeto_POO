@@ -77,6 +77,7 @@ public class menus {
                         System.out.println("Cadastrado!!!");
                         cont = 1;
                         peixes[i] = new Peixe(cor,profundidade,peso,idade,membros,nome);
+                        System.out.println("");
                     }
                 }
                 menuPrincipal();
