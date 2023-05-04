@@ -192,20 +192,37 @@ public class menus {
         System.out.print("Sua escolha:");
         escolha = sc.nextInt();
         }while (escolha<0 || escolha>4 );
-    	if(escolha==0){
+    	
+        if(escolha==0){
             for (int i=0 ; i < 100 ; i++){
                 if (peixes[i]!=null) {
                     System.out.print("Peixe:"+i+" | Nome:");
                     System.out.println(peixes[i].getNome());
-                    
-                    do{
-                        System.out.println("--------------------------");
-                        System.out.print("Digite o id do Animal de escolha: ");
-                        id = sc.nextInt();
-                    }while(id<0 || id>100);
-                    System.out.print(peixes[id]);
                 }
             }    
+            do{
+                System.out.println("--------------------------");
+                System.out.print("Digite o id do Animal de escolha: ");
+                id = sc.nextInt();
+            }while(id<0 || id>100);
+            System.out.print(peixes[id]);
+                    
+            do{
+                System.out.println("----- MENU DE AÇÕES -----");
+                System.out.println("[0] Excluir Animal");
+                System.out.println("[1] Emitir Som");
+                System.out.println("[2] Alimentar");
+                System.out.println("[3] Locomover");
+                System.out.println("[4] Fazer Bolhas");
+                System.out.println("[5] Voltar ao Menu");
+                System.out.print("Sua escolha:");
+                escolha = sc.nextInt();
+            }while(escolha < 0 || escolha > 5 );
+            if (escolha == 0){}
+            if (escolha == 1){peixes[id].emitirSom();}
+            if (escolha == 2){peixes[id].alimentar();}
+            if (escolha == 3){peixes[id].locomover();}
+            if (escolha == 4){peixes[id].soltarBolha();}    
         }
             
         if(escolha==1) {
@@ -213,46 +230,93 @@ public class menus {
                 if (aves[i]!=null) {
                     System.out.print("Ave:"+i+" | Nome:");
                     System.out.println(aves[i].getNome());
-                
-                    do{
-                        System.out.println("--------------------------");
-                        System.out.print("Digite o id do Animal de escolha: ");
-                        id = sc.nextInt();
-                    }while(id<0 || id>100);
-                    System.out.print(aves[id]);
-               }        
-            }
-        }
+                }        
+            }    
+            do{
+                System.out.println("--------------------------");
+                System.out.print("Digite o id do Animal de escolha: ");
+                id = sc.nextInt();
+            }while(id<0 || id>100);
+            System.out.print(aves[id]);
+                    
+            do{
+                System.out.println("----- MENU DE AÇÕES -----");
+                System.out.println("[0] Excluir Animal");
+                System.out.println("[1] Emitir Som");
+                System.out.println("[2] Alimentar");
+                System.out.println("[3] Locomover");
+                System.out.println("[4] Fazer Ninho");
+                System.out.println("[5] Bicar");
+                System.out.println("[6] Voltar ao Menu");
+                System.out.print("Sua escolha:");
+                escolha = sc.nextInt();
+            }while(escolha < 0 || escolha > 6 );
+            if (escolha == 0){}
+            if (escolha == 1){aves[id].emitirSom();}
+            if (escolha == 2){aves[id].alimentar();}
+            if (escolha == 3){aves[id].locomover();}
+            if (escolha == 4){aves[id].fazerNinho();}
+            if (escolha == 5){aves[id].bicar();}
+           }
   
         if(escolha==2) {
             for (int i=0 ; i < 100 ; i++){
                 if (reptils[i]!=null) {
                     System.out.print("Reptil:"+i+" | Nome:");
                     System.out.println(reptils[i].getNome());
-              
-        
-                    do{
-                        System.out.println("---------------------------");
-                        System.out.print("Digite o id do Animal de escolha:");
-                        id = sc.nextInt();
-                    }while(id<0 || id>100);
-                    System.out.print(reptils[id]);
                 }
-            }  
+            }         
+            do{
+                System.out.println("---------------------------");
+                System.out.print("Digite o id do Animal de escolha:");
+                id = sc.nextInt();
+            }while(id<0 || id>100);
+            System.out.print(reptils[id]); 
+            do{
+                System.out.println("----- MENU DE AÇÕES -----");
+                System.out.println("[0] Excluir Animal");
+                System.out.println("[1] Emitir Som");
+                System.out.println("[2] Alimentar");
+                System.out.println("[3] Locomover");
+                System.out.println("[4] Envenenar");
+                System.out.println("[5] Voltar ao Menu");
+                System.out.print("Sua escolha:");
+                escolha = sc.nextInt();
+                }while(escolha < 0 || escolha > 5 );
+                if (escolha == 0){}
+                if (escolha == 1){reptils[id].emitirSom();}
+                if (escolha == 2){reptils[id].alimentar();}
+                if (escolha == 3){reptils[id].locomover();}
+                if (escolha == 4){reptils[id].envenenamento();} 
         }        
 	if(escolha==3) {
             for (int i=0 ; i < 100 ; i++){
                 if (mamiferos[i]!=null) {
                     System.out.print("Mamifero:"+i+" | Nome:");
-                    System.out.println(mamiferos[i].getNome());
-                    do{
-                        System.out.println("---------------------------");
-                        System.out.print("Digite o id do Animal de escolha:");
-                        id = sc.nextInt();
-                    }while(id<0 || id>100);
-                    System.out.print(mamiferos[id]);
-                }
-            }	
+                    System.out.println(mamiferos[i].getNome()); 
+                }    
+            }        
+            do{
+                System.out.println("---------------------------");
+                System.out.print("Digite o id do Animal de escolha:");
+                id = sc.nextInt();
+            }while(id<0 || id>100);
+            System.out.print(mamiferos[id]);
+            
+            do{
+                System.out.println("----- MENU DE AÇÕES -----");
+                System.out.println("[0] Excluir Animal");
+                System.out.println("[1] Emitir Som");
+                System.out.println("[2] Alimentar");
+                System.out.println("[3] Locomover");
+                System.out.println("[4] Voltar ao Menu");
+                System.out.print("Sua escolha:");
+                escolha = sc.nextInt();
+            }while(escolha < 0 || escolha > 4 );
+            if (escolha == 0){}
+            if (escolha == 1){mamiferos[id].emitirSom();}
+            if (escolha == 2){mamiferos[id].alimentar();}
+            if (escolha == 3){mamiferos[id].locomover();}
         }      
         menuPrincipal();
 	if(escolha==4) {
