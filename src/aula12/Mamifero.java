@@ -9,7 +9,6 @@ public class Mamifero extends Animais {
         this.velocidade = velocidade;
     }
 
-    
 
     public int getVelocidade() {
         return velocidade;
