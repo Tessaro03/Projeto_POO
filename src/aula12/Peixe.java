@@ -1,5 +1,8 @@
 package aula12;
-public class Peixe extends Animais {
+
+import java.io.Serializable;
+
+public class Peixe extends Animais  {
     protected String corEscama;
     protected int profundidade;
 

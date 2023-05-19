@@ -1,7 +1,11 @@
 package aula12;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class menus {
+public class menus implements Serializable{
     Scanner sc = new Scanner(System.in);
     Mamifero [] mamiferos = new Mamifero[100];
     Peixe [] peixes = new Peixe[100];
@@ -26,6 +30,25 @@ public class menus {
 	}
 	if(escolha==2) {  
             System.out.println("");
+            try {
+		// ponta de saída
+		FileOutputStream fos = new FileOutputStream("inventario.ser");
+		// ponta de entrada
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+			
+		// serialize
+		oos.writeObject(peixes);
+			
+		String s = "Exemplo de string";
+		oos.writeObject(s);
+			
+		oos.close();
+			
+		} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		}
+            
 	}
     }
     

@@ -1,5 +1,8 @@
 package aula12;
-public abstract class Animais {
+
+import java.io.Serializable;
+
+public abstract class Animais implements Serializable {
 
     protected String nome;
     protected float peso;
